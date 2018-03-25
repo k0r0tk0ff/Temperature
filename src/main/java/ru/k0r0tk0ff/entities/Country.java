@@ -3,14 +3,15 @@ package ru.k0r0tk0ff.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "countries")
-public class City {
+//@Table(name = "countries")
+public class Country {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    //@Column(name = "id")
     private Long id;
 
+    //@Column(name = "name")
     private String name;
 
     public Long getId() {

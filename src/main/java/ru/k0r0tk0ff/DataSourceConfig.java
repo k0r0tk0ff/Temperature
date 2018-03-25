@@ -1,8 +1,5 @@
 package ru.k0r0tk0ff;
 
-import java.util.HashMap;
-
-import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +10,6 @@ import org.springframework.context.annotation.PropertySources;
 
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.jpa.JpaTransactionManager;
-import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
-import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
-import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
 // (@see resources/datasource-cfg.properties).
@@ -38,8 +31,8 @@ public class DataSourceConfig {
         EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
         EmbeddedDatabase db = builder
                 .setType(EmbeddedDatabaseType.HSQL) //.H2 or .DERBY
-         //       .addScript("schema.sql")
-         //       .addScript("data.sql")
+         //       .addScript("1schema.sql")
+         //       .addScript("1data.sql")
                 .build();
         return db;
     }*/
@@ -59,4 +52,5 @@ public class DataSourceConfig {
 
         return dataSource;
     }
+
 }

@@ -6,20 +6,20 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import ru.k0r0tk0ff.entities.City;
-import ru.k0r0tk0ff.services.CityServiceImpl;
+import ru.k0r0tk0ff.entities.Country;
+import ru.k0r0tk0ff.services.CountryServiceImpl;
 
 import java.util.Collection;
 
 @RestController
 @RequestMapping("/")
-public class CityController {
+public class CountryController {
 
     @Autowired
-    private CityServiceImpl cityService;
+    private CountryServiceImpl cityService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<Collection<City>> getCities() {
+    public ResponseEntity<Collection<Country>> getCities() {
         return new ResponseEntity<>(cityService.findAll(), HttpStatus.OK);
     }
 
