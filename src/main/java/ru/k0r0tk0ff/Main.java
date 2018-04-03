@@ -23,7 +23,7 @@ public class Main implements WebMvcConfigurer{
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        // Access Bootstrap static resource:
+        // Bind Bootstrap static resource:
         // http://somedomain/SomeContextPath/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css
         registry.addResourceHandler("/webjars/**") //
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");

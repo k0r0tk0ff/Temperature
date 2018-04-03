@@ -9,3 +9,11 @@ Show temperature in cities
   Для сборки приложения использовать Maven или Gradle. 
   Приложение должно быть самодостаточным, запускаться из командной строки 
   и не требовать отдельно установленных servlet контейнеров, application серверов и т.п.
+
+
+  ----------------------------------------------------------
+  use:
+  https://o7planning.org/ru/10749/using-twitter-bootstrap-in-spring-boot
+  http://www.baeldung.com/maven-webjars
+  
+  
