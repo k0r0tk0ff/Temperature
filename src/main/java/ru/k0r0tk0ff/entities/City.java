@@ -1,5 +1,7 @@
 package ru.k0r0tk0ff.entities;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
@@ -8,6 +10,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "cities")
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class City {
 
     @Id
