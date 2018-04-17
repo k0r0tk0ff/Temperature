@@ -4,6 +4,7 @@ public class MainServiceImpl implements MainService {
 
     @Override
     public String getCurrentTAndMinTwithForecast() {
+
         return null;
     }
 }
