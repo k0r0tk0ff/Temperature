@@ -10,7 +10,6 @@ import java.util.Set;
 
 @Entity
 @Table(name = "cities")
-@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class City {
 
     @Id

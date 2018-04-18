@@ -1,4 +1,4 @@
-package ru.k0r0tk0ff.repos;
+package ru.k0r0tk0ff.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
