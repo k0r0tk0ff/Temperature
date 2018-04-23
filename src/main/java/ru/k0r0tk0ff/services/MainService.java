@@ -1,7 +1,8 @@
 package ru.k0r0tk0ff.services;
 
+import java.util.Map;
+
 public interface MainService {
-
-  String getCurrentTAndMinTwithForecast();
-
+    Map<String, Double> getResult();
 }
+

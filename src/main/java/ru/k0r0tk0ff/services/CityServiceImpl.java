@@ -13,12 +13,10 @@ public class CityServiceImpl implements CityService {
     @Autowired
     private CityRepo cityRepo;
 
-    // @Override
     public City findOne(Long id) {
         return cityRepo.getOne(id);
     }
 
-    //@Override
     public Collection<City> findAll() {
         return cityRepo.findAll();
     }
