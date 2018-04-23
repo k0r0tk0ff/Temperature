@@ -13,9 +13,10 @@ public interface TemperatureRepo extends JpaRepository<Temperature, Long> {
             "JOIN cities ON t.city_id = cities.city_id  " +
             "WHERE t.date = ?1 " +
          //   "WHERE t.date = '2018-01-01' " +
-            "AND cities.name = 'Moscow'",
+         //   "AND cities.name = 'Moscow'",
+            "AND cities.name = ?2 ",
             nativeQuery = true)
-    Double getCurrentTemperature(String data);
+    Double getCurrentTemperature(String data, String cityName);
 
     @Query(value =
             "SELECT min(temperature_value) " +

@@ -13,12 +13,12 @@ public class MainServiceImpl implements MainService {
     TemperatureRepo tRepo;
 
     @Override
-    public Map<String, Double> getResult() {
+    public Map<String, Double> getResult(String cityName) {
         Map<String, Double> map = new HashMap<>();
 
         String today = "2018-01-01";
 
-        map.put("Current_temperature", tRepo.getCurrentTemperature(today));
+        map.put("Current_temperature", tRepo.getCurrentTemperature(today, cityName));
         map.put("Forecast_temperature", tRepo.getForecastTemperatures());
 
         return map;

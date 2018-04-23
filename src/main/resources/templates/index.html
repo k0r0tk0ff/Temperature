@@ -22,23 +22,25 @@
 
 <h2>Temperature project</h2>
 
-<form id="sel" action="getCurrentTAndMinTwithForecast" method="post" class="form-horizontal" role="form">
+<form id="sel"
+      action="getCurrentTAndMinTwithForecast"
+      method="post"
+      class="form-horizontal"
+      role="form">
     <div class="container">
         <form>
-            <div class="form-group">
-                <label for="sel1">Select country:</label>
-                <select class="form-control" id="sel1">
-                    <option>ru</option>
-<!--                    <option>en</option>
-                    <option>fr</option>
-                    <option>sp</option>-->
+            <div class="form-group" id="country">
+                <label for="country">Select country:</label>
+                <select name="country" class="form-control">
+                    <option value="ru">ru</option>
                 </select>
                 <br>
             </div>
-            <div class="form-group">
-                <label for="sel2">Select city:</label>
-                <select class="form-control" id="sel2">
-                    <option>Moscow</option>
+            <div class="form-group" id="city">
+                <label for="city">Select city:</label>
+                <select name="city" class="form-control">
+                    <option value="Moscow">Moscow</option>
+                    <option value="StPeterburg">StPeterburg</option>
                 </select>
                 <br>
             </div>
