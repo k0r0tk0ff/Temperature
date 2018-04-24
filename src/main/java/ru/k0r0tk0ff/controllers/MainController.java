@@ -19,7 +19,6 @@ public class MainController {
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ResponseBody
     public Map<String, Double> getData(@RequestParam String city) {
-        System.out.println("See post request - " + city);
-        return mainService.getResult(city);
+         return mainService.getResult(city);
     }
 }

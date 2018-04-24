@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.k0r0tk0ff.dao.TemperatureRepo;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -22,8 +20,7 @@ public class MainServiceImpl implements MainService {
         String todayPlusTreeDay;
         Map<String, Double> map = new HashMap<>();
 
-        //String today = "2018-01-01";
-        today = getCurrentDate2();
+        today = getCurrentDate();
         todayPlusTreeDay = getCurrentDatePlusTreeDay();
 
         map.put(
@@ -31,12 +28,12 @@ public class MainServiceImpl implements MainService {
                 tRepo.getCurrentTemperature(today, cityName));
 
         map.put("Forecast_temperature",
-                tRepo.getForecastTemperatures(today, todayPlusTreeDay));
+                tRepo.getForecastTemperatures(cityName, today, todayPlusTreeDay));
 
         return map;
     }
 
-    private String getCurrentDate2() {
+    private String getCurrentDate() {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate today = LocalDate.now();

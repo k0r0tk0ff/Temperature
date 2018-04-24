@@ -26,8 +26,8 @@ insert into temperatures(temperature_id, date, temperature_value, city_id) value
 insert into temperatures(temperature_id, date, temperature_value, city_id) values (14, '2018-04-27', '24', 3);
 insert into temperatures(temperature_id, date, temperature_value, city_id) values (15, '2018-04-28', '28', 3);
 
-insert into temperatures(temperature_id, date, temperature_value, city_id) values (16, '2018-01-01', '30', 4);
-insert into temperatures(temperature_id, date, temperature_value, city_id) values (17, '2018-01-02', '30', 4);
-insert into temperatures(temperature_id, date, temperature_value, city_id) values (18, '2018-01-03', '30', 4);
-insert into temperatures(temperature_id, date, temperature_value, city_id) values (19, '2018-01-04', '30', 4);
-insert into temperatures(temperature_id, date, temperature_value, city_id) values (20, '2018-01-05', '30', 4);
+insert into temperatures(temperature_id, date, temperature_value, city_id) values (16, '2018-04-24', '30', 4);
+insert into temperatures(temperature_id, date, temperature_value, city_id) values (17, '2018-04-25', '30', 4);
+insert into temperatures(temperature_id, date, temperature_value, city_id) values (18, '2018-04-26', '30', 4);
+insert into temperatures(temperature_id, date, temperature_value, city_id) values (19, '2018-04-27', '30', 4);
+insert into temperatures(temperature_id, date, temperature_value, city_id) values (20, '2018-04-28', '30', 4);
