@@ -16,14 +16,14 @@ public interface TemperatureRepo extends JpaRepository<Temperature, Long> {
          //   "AND cities.name = 'Moscow'",
             "AND cities.name = ?2 ",
             nativeQuery = true)
-    Double getCurrentTemperature(String data, String cityName);
+    Double getCurrentTemperature(String today, String cityName);
 
     @Query(value =
             "SELECT min(temperature_value) " +
             "FROM temperatures t " +
             "JOIN cities ON t.city_id = cities.city_id " +
             "WHERE cities.NAME = 'Moscow' " +
-            "AND t.date BETWEEN '2018-01-01' AND '2018-01-05'",
+            "AND t.date BETWEEN ?1 AND ?2",
             nativeQuery = true)
-    Double getForecastTemperatures();
+    Double getForecastTemperatures(String today, String todayPlusTreeDay);
 }
