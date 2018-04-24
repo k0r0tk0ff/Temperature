@@ -6,7 +6,9 @@ import ru.k0r0tk0ff.dao.TemperatureRepo;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+
 
 @Service
 public class MainServiceImpl implements MainService {
@@ -44,8 +46,8 @@ public class MainServiceImpl implements MainService {
     private String getCurrentDatePlusTreeDay() {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate today = LocalDate.now().plusDays(3);
+        LocalDate todayPlusTreeDay = LocalDate.now().plusDays(3);
 
-        return today.format(formatter);
+        return todayPlusTreeDay.format(formatter);
     }
 }
