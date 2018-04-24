@@ -17,7 +17,7 @@ public class MainServiceImpl implements MainService {
     TemperatureRepo tRepo;
 
     @Override
-    public Map<String, Double> getResult(String cityName) {
+    public Map<String, Double> getResult(String cityName, String countryName) {
         String today;
         String todayPlusTreeDay;
         Map<String, Double> map = new HashMap<>();
@@ -27,10 +27,10 @@ public class MainServiceImpl implements MainService {
 
         map.put(
                 "Current_temperature",
-                tRepo.getCurrentTemperature(today, cityName));
+                tRepo.getCurrentTemperature(today, cityName, countryName));
 
         map.put("Forecast_temperature",
-                tRepo.getForecastTemperatures(cityName, today, todayPlusTreeDay));
+                tRepo.getForecastTemperatures(countryName, cityName, today, todayPlusTreeDay));
 
         return map;
     }

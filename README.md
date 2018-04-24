@@ -17,4 +17,5 @@ Show temperature in cities
   https://o7planning.org/ru/10749/using-twitter-bootstrap-in-spring-boot  
   http://www.baeldung.com/maven-webjars
   
-  
+  https://silviomoreto.github.io/bootstrap-select/examples/#basic-examples
+  https://silviomoreto.github.io/bootstrap-select/

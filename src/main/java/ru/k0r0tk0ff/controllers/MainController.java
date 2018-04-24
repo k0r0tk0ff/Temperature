@@ -18,7 +18,10 @@ public class MainController {
             method = RequestMethod.POST,
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ResponseBody
-    public Map<String, Double> getData(@RequestParam String city) {
-         return mainService.getResult(city);
+    public Map<String, Double> getData(
+            @RequestParam String cityName,
+            @RequestParam String countryName
+            ) {
+         return mainService.getResult(cityName, countryName);
     }
 }

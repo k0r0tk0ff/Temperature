@@ -25,21 +25,29 @@
 <form id="sel"
       action="getCurrentTAndMinTwithForecast"
       method="post"
-      role="form">
+      role="form"
+      data-width="auto">
     <!--class="form-horizontal"-->
     <div class="container">
         <form>
-            <div class="form-group" id="country">
-                <label for="country">Select country:</label>
-                <select name="country" class="form-control" data-style="btn-primary">
+            <div class="form-group" id="countryName">
+                <label for="countryName">Select country:</label>
+                <select
+                        name="countryName"
+                        class="form-control"
+                        data-style="btn-primary"
+                        data-width="auto">
                     <option value="ru">ru</option>
                     <option value="sp">sp</option>
                 </select>
                 <br>
             </div>
-            <div class="form-group" id="city">
-                <label for="city">Select city:</label>
-                <select name="city" class="form-control" data-style="btn-success">
+            <div class="form-group" id="cityName">
+                <label for="cityName">Select city:</label>
+                <select name="cityName"
+                        class="form-control"
+                        data-style="btn-success"
+                        data-width="auto">
                     <option value="Moscow">Moscow</option>
                     <option value="StPeterburg">StPeterburg</option>
                     <option value="Saratov">Saratov</option>
@@ -55,7 +63,6 @@
         </form>
     </div>
 </form>
-
 </body>
 </html>
 
