@@ -11,7 +11,7 @@ import java.util.Map;
 public class MainController {
 
     @Autowired
-    MainService mainService;
+    private MainService mainService;
 
     @RequestMapping(
             value="/getCurrentTAndMinTwithForecast",

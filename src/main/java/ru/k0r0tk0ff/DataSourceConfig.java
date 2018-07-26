@@ -12,30 +12,8 @@ import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 @Configuration
-// (@see resources/datasource-cfg.properties).
 @PropertySources({ @PropertySource("classpath:datasource-cfg.properties") })
 public class DataSourceConfig {
-
-/*    @Bean
-    @ConfigurationProperties("application.datasource")
-    public DataSource dataSource() {
-        return DataSourceBuilder
-                .create()
-                .build();
-    }*/
-
-/*    @Bean
-    public DataSource dataSource() {
-
-        // no need shutdown, EmbeddedDatabaseFactoryBean will take care of this
-        EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-        EmbeddedDatabase db = builder
-                .setType(EmbeddedDatabaseType.HSQL) //.H2 or .DERBY
-         //       .addScript("1schema.sql")
-         //       .addScript("1data.sql")
-                .build();
-        return db;
-    }*/
 
     @Autowired
     private Environment env;
