@@ -1,0 +1,64 @@
+dn: dc=springframework,dc=org
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: springframework
+
+dn: ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: uid=ivanov,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Vasya Ivanov
+sn: Ivanov
+uid: ivanov
+#password = 11111
+userPassword: {SSHA}QkD2JJbQ6Rb3RdJxob0VWltObgUIoLWsv78xJA==
+
+dn: uid=petrov,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Motya Petrov
+sn: Petrov
+uid: petrov
+#password = 22222
+userPassword: {SSHA}uYoZw9coUijDTxDb4/mmp2ktdM7428pfD7RsEA==
+
+dn: uid=berda,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Drahm Berda
+sn: Berda
+uid: berda
+#password = 12345
+userPassword: {SSHA}8T7wdxD23nPJP4UXWk9KZBiiqbXyDp6lH3Td2g==
+
+dn: cn=developers,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: developers
+ou: developer
+uniqueMember: uid=ivanov,ou=people,dc=springframework,dc=org
+uniqueMember: uid=petrov,ou=people,dc=springframework,dc=org
+
+dn: cn=managers,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: managers
+ou: manager
+uniqueMember: uid=berda,ou=people,dc=springframework,dc=org
+
