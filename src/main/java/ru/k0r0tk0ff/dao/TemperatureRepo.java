@@ -13,8 +13,6 @@ public interface TemperatureRepo extends JpaRepository<Temperature, Long> {
             "JOIN cities ON t.city_id = cities.city_id  " +
             "JOIN countries ON countries.country_id = cities.country_id " +
             "WHERE t.date = ?1 " +
-         //   "WHERE t.date = '2018-01-01' " +
-         //   "AND cities.name = 'Moscow'",
             "AND cities.name = ?2 " +
             "AND countries.name = ?3 ",
             nativeQuery = true)

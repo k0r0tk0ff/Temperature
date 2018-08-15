@@ -1,7 +1,5 @@
 package ru.k0r0tk0ff.entities;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
@@ -25,7 +23,7 @@ public class City {
     private Country country;
 
     @OneToMany(mappedBy = "city")
-    private Set<Temperature> temperatures = new HashSet<Temperature>();
+    private Set<Temperature> temperatures = new HashSet<>();
 
 
     public Set<Temperature> getTemperatures() {

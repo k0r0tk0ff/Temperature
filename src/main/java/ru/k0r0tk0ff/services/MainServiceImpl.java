@@ -13,8 +13,13 @@ import java.util.Map;
 @Service
 public class MainServiceImpl implements MainService {
 
-    @Autowired
+
     private TemperatureRepo tRepo;
+
+    @Autowired
+    public MainServiceImpl(TemperatureRepo tRepo) {
+        this.tRepo = tRepo;
+    }
 
     @Override
     public Map<String, Double> getResult(String cityName, String countryName) {
@@ -25,14 +30,16 @@ public class MainServiceImpl implements MainService {
         today = getCurrentDate();
         todayPlusTreeDay = getCurrentDatePlusTreeDay();
 
-        System.out.println("-----------------------------------------------------------------------");
+        // DEBUG
+        // System.out.println("-----------------------------------------------------------------------");
 
         map.put(
                 "Current_temperature",
                 tRepo.getCurrentTemperature(today, cityName, countryName));
 
-        System.out.println(tRepo.getCurrentTemperature(today, cityName, countryName));
-        System.out.println("-----------------------------------------------------------------------");
+        // DEBUG
+        //System.out.println(tRepo.getCurrentTemperature(today, cityName, countryName));
+        //System.out.println("-----------------------------------------------------------------------");
 
         map.put("Forecast_temperature",
                 tRepo.getForecastTemperatures(countryName, cityName, today, todayPlusTreeDay));

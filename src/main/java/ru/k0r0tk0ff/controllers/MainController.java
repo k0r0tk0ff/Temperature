@@ -10,8 +10,12 @@ import java.util.Map;
 @RestController
 public class MainController {
 
-    @Autowired
     private MainService mainService;
+
+    @Autowired
+    public MainController(MainService mainService) {
+        this.mainService = mainService;
+    }
 
     @RequestMapping(
             value="/getCurrentTAndMinTwithForecast",
