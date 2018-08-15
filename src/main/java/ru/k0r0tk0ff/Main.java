@@ -6,8 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-@EnableAutoConfiguration
+
 @SpringBootApplication(scanBasePackages = "ru.k0r0tk0ff")
+//@EnableAutoConfiguration
 public class Main implements WebMvcConfigurer{
 
     public static void main(String[] args) {
